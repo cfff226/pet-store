@@ -23,3 +23,9 @@ print(f"This item costs ....")
 
 print("This item has been added to your basket successfully")
 
+if choice == "4":
+    # Exit the program
+    print("Thank you for shopping with Paws n Cart")
+    done = True
+
+# Menu which shows the user the range of items
