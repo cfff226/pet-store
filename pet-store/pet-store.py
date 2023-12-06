@@ -20,14 +20,14 @@ while not done:
 
     if choice == "1":
         # Menu which shows the user the range of items
-        print("\nPurina One Cat Salmon - Whole Grain 3KG - £7.99\n")
-        print("Iams Senior 7+ Cat Food With Ocean Fish 2KG - £5.99\n")
-        print("Iams Adult 1+ Cat Food With Fresh Chicken 800KG £3.99\n")
-        print("Felix As Good As It Looks Cat Food Mixed Selection 40X100G £7.00\n")
-        print("Felix Doubley Delicious Cat Food Meaty Selection 12x100G £4.00\n")
-        print("Winalot Wet Dog Food Pouches Meaty Chunks In Jelly 12X100G £3.99\n")
-        print("Bakers Whirlers Double Flavour Twisted Treats 130G £4.00\n")
-        print("Chicken And Country Vegetable Dry Dog Food 800KG £6.99\n")
+        print("\n'Purina One Cat Salmon - Whole Grain' | 3KG |£7.99\n")
+        print("'Iams Senior 7+ Cat Food With Ocean Fish' | 2KG | £5.99\n")
+        print("'Iams Adult 1+ Cat Food With Fresh Chicken' | 800KG | £3.99\n")
+        print("'Felix As Good As It Looks Cat Food Mixed Selection' | 40X100G | £7.00\n")
+        print("'Felix Doubley Delicious Cat Food Meaty Selection' | 12x100G | £4.00\n")
+        print("'Winalot Wet Dog Food Pouches Meaty Chunks In Jelly' | 12X100G | £3.99\n")
+        print("'Bakers Whirlers Double Flavour Twisted Treats' | 130G | £4.00\n")
+        print("'Chicken And Country Vegetable Dry Dog Food' | 800KG | £6.99\n")
         add_item = input(
             "\nPlease input the item that you would like to add to your cart: "
         )
