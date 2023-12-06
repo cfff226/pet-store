@@ -2,17 +2,6 @@
 
 # Dictionary of items
 
-Stock = {
-    "1. Purina One Cat Salmon - Whole Grain 3KG": 10,
-    "2. Iams Senior 7+ Cat Food With Ocean Fish 2KG": 15,
-    "3. Iams Adult 1+ Cat Food With Fresh Chicken 800KG": 12,
-    "4. Felix As Good As It Looks Cat Food Mixed Selection 40X100G": 15,
-    "5. Felix Doubley Delicious Cat Food Meaty Selection 12x100G": 20,
-    "6. Winalot Wet Dog Food Pouches Meaches Chunks In Jelly 12x100G": 15,
-    "7. Bakers Whirlers Double Flavour Twisted Treats 130G": 4,
-    "8. Chicken And Country Vegetable Dry Dog Food 800KG": 7,
-}
-
 Prices = {
     "1. Purina One Cat Salmon - Whole Grain 3KG": 7.99,
     "2. Iams Senior 7+ Cat Food With Ocean Fish 2KG": 5.99,
@@ -57,17 +46,11 @@ while True:
             "\nPlease input the number of the item that you would like to add to your basket: "
         )
         if add_item.lower() == "1":
-                if "1. Purina One Cat Salmon - Whole Grain 3KG" in Stock:
                     shopping_cart.append("1. Purina One Cat Salmon - Whole Grain 3KG")
-                    Stock["1. Purina One Cat Salmon - Whole Grain 3KG"] -= 1
-                    print(Stock)
                     print(shopping_cart)
                     break
         elif add_item.lower() == "2":
-                if "2. Iams Senior 7+ Cat Food With Ocean Fish 2KG" in Stock:
                     shopping_cart.append("2. Iams Senior 7+ Cat Food With Ocean Fish 2KG")
-                    Stock["2. Iams Senior 7+ Cat Food With Ocean Fish 2KG"] -= 1
-                    print(Stock)
                     print(shopping_cart)
                     break
 
