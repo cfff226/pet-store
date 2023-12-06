@@ -46,3 +46,12 @@ print(f"This item costs ....")
 print("This item has been added to your basket successfully")
 
 # Menu which shows the user the range of items
+
+print("Purina One Cat Salmon - Whole Grain 3KG")
+print("Iams Senior 7+ Cat Food With Ocean Fish 2KG")
+print("Iams Adult 1+ Cat Food With Fresh Chicken 800KG")
+print("Felix As Good As It Looks Cat Food Mixed Selection 40X100G")
+print("Felix Doubley Delicious Cat Food Meaty Selection 12x100G")
+print("Winalot Wet Dog Food Pouches Meaty Chunks In Jelly 12X100G")
+print("Bakers Whirlers Double Flavour Twisted Treats 130G")
+print("Chicken And Country Vegetable Dry Dog Food 800KG")
