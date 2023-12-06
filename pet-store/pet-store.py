@@ -3,6 +3,7 @@
 # Dictionary of items
 
 shopping_cart = []
+price_total = []
 
 Prices = {
     "1. Purina One Cat Salmon - Whole Grain 3KG": 7.99,
@@ -31,24 +32,28 @@ while not done:
 
     if choice == "1":
         # Menu which shows the user the range of items
-        print("\n1. Purina One Cat Salmon - Whole Grain 3KG\n")
-        print("2. Iams Senior 7+ Cat Food With Ocean Fish 2KG\n")
-        print("3. Iams Adult 1+ Cat Food With Fresh Chicken 800KG\n")
-        print("4. Felix As Good As It Looks Cat Food Mixed Selection 40X100G\n")
-        print("5. Felix Doubley Delicious Cat Food Meaty Selection 12x100G\n")
-        print("6. Winalot Wet Dog Food Pouches Meaty Chunks In Jelly 12X100G\n")
-        print("7. Bakers Whirlers Double Flavour Twisted Treats 130G\n")
-        print("8. Chicken And Country Vegetable Dry Dog Food 800KG\n")
+        print("\n1. Purina One Cat Salmon - Whole Grain 3KG - £7.99\n")
+        print("2. Iams Senior 7+ Cat Food With Ocean Fish 2KG - £5.99\n")
+        print("3. Iams Adult 1+ Cat Food With Fresh Chicken 800KG £3.99\n")
+        print("4. Felix As Good As It Looks Cat Food Mixed Selection 40X100G £7.00\n")
+        print("5. Felix Doubley Delicious Cat Food Meaty Selection 12x100G £4.00\n")
+        print("6. Winalot Wet Dog Food Pouches Meaty Chunks In Jelly 12X100G £3.99\n")
+        print("7. Bakers Whirlers Double Flavour Twisted Treats 130G £4.00\n")
+        print("8. Chicken And Country Vegetable Dry Dog Food 800KG £6.99\n")
         add_item = input(
             "\nPlease input the number of the item that you would like to add to your basket: "
         )
         price = float(input("Please input the price of the item you wish to purchase: "))
         if add_item.lower() == "1":
             shopping_cart.append("1. Purina One Cat Salmon - Whole Grain 3KG")
+            price_total.append(price)
             print(shopping_cart)
+            print(price_total)
         elif add_item.lower() == "2":
             shopping_cart.append("2. Iams Senior 7+ Cat Food With Ocean Fish 2KG")
+            price_total.append(price)
             print(shopping_cart)
+            print(price_total)
 
     elif choice == "2":
         remove_item = input(
