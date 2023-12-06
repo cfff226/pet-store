@@ -11,8 +11,15 @@ while not done:
     print("4. Checkout")
 
 # Request input from user for their menu choice and the item that they would like to add to basket
+
 choice = input("Please enter the number of the option that you would like to choose: ")
 item = input("Please input the item that you would like to add to your basket: ")
 
+# Display output to the user to tell them the price of the item
 
+print(f"This item costs ....")
+
+# Display output to the user to tell them that the item has been added to their basket
+
+print("This item has been added to your basket successfully")
 
