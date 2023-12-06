@@ -18,8 +18,16 @@ choice = input(
 
 while True:
     if choice == "1":
+        print("\nPurina One Cat Salmon - Whole Grain 3KG\n")
+        print("Iams Senior 7+ Cat Food With Ocean Fish 2KG\n")
+        print("Iams Adult 1+ Cat Food With Fresh Chicken 800KG\n")
+        print("Felix As Good As It Looks Cat Food Mixed Selection 40X100G\n")
+        print("Felix Doubley Delicious Cat Food Meaty Selection 12x100G\n")
+        print("Winalot Wet Dog Food Pouches Meaty Chunks In Jelly 12X100G\n")
+        print("Bakers Whirlers Double Flavour Twisted Treats 130G\n")
+        print("Chicken And Country Vegetable Dry Dog Food 800KG\n")
         add_item = input(
-            "Please input the item that you would like to add to your basket: "
+            "\nPlease input the item that you would like to add to your basket: "
         )
     elif choice == "2":
         remove_item = input(
