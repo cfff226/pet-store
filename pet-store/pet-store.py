@@ -10,7 +10,9 @@ while not done:
     print("3. View your cart")
     print("4. Checkout")
 
-
+# Request input from user for their menu choice and the item that they would like to add to basket
+choice = input("Please enter the number of the option that you would like to choose: ")
+item = input("Please input the item that you would like to add to your basket: ")
 
 
 
