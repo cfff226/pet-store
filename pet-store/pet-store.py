@@ -34,13 +34,43 @@ while not done:
         price = float(
             input("Please input the price of the item you wish to purchase: ")
         )
-        if add_item.lower() == "purina one cat salmon - whole grain 3kg":
-            shopping_cart.append("Purina One Cat Salmon - Whole Grain 3KG")
+        if add_item.lower() == "purina one cat salmon - whole grain":
+            shopping_cart.append("purina one cat salmon - whole grain")
             price_total.append(price)
             print(shopping_cart)
             print(price_total)
-        elif add_item.lower() == "iams senior 7+ cat food with ocean fish 2kg":
-            shopping_cart.append("Iams Senior 7+ Cat Food With Ocean Fish 2KG")
+        elif add_item.lower() == "iams senior 7+ cat food with ocean fish":
+            shopping_cart.append("iams senior 7+ cat food with ocean fish")
+            price_total.append(price)
+            print(shopping_cart)
+            print(price_total)
+        elif add_item.lower() == "iams adult 1+ cat food with fresh chicken":
+            shopping_cart.append("iams adult 1+ cat food with fresh chicken")
+            price_total.append(price)
+            print(shopping_cart)
+            print(price_total)
+        elif add_item.lower() == "felix as good as it looks cat food mixed selection":
+            shopping_cart.append("felix as good as it looks cat food mixed selection")
+            price_total.append(price)
+            print(shopping_cart)
+            print(price_total)
+        elif add_item.lower() == "felix doubley delicious cat food meaty selection":
+            shopping_cart.append("felix doubley delicious cat food meaty selection")
+            price_total.append(price)
+            print(shopping_cart)
+            print(price_total)
+        elif add_item.lower() == "winalot wet dog food pouches meaty chunks in jelly":
+            shopping_cart.append("winalot wet dog food pouches meaty chunks in jelly")
+            price_total.append(price)
+            print(shopping_cart)
+            print(price_total)
+        elif add_item.lower() == "bakers whirlers double flavour twisted treats":
+            shopping_cart.append("bakers whirlers double flavour twisted treats")
+            price_total.append(price)
+            print(shopping_cart)
+            print(price_total)
+        elif add_item.lower() == "chicken and country vegetable dry dog food":
+            shopping_cart.append("chicken and country vegetable dry dog food")
             price_total.append(price)
             print(shopping_cart)
             print(price_total)
