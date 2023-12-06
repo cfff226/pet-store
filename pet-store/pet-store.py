@@ -42,56 +42,111 @@ while not done:
         if add_item.lower() == "purina one cat salmon - whole grain":
             shopping_cart.append("Purina One Cat Salmon - Whole Grain")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
+
         elif add_item.lower() == "iams senior 7+ cat food with ocean fish":
             shopping_cart.append("Iams Senior 7+ Cat Food With Ocean Fish")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
+
         elif add_item.lower() == "iams adult 1+ cat food with fresh chicken":
             shopping_cart.append("Iams Adult 1+ Cat Food With Fresh Chicken")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
+
         elif add_item.lower() == "felix as good as it looks cat food mixed selection":
             shopping_cart.append("Felix As Good As It Looks Cat Food Mixed Selection")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
+
         elif add_item.lower() == "felix doubley delicious cat food meaty selection":
             shopping_cart.append("Felix Doubley Delicious Cat Food Meaty Selection")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
+
         elif add_item.lower() == "winalot wet dog food pouches meaty chunks in jelly":
             shopping_cart.append("Winalot Wet Dog Food Pouches Meaty Chunks In Jelly")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
+
         elif add_item.lower() == "bakers whirlers double flavour twisted treats":
             shopping_cart.append("Bakers Whirlers Double Flavour Twisted Treats")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
+
         elif add_item.lower() == "chicken and country vegetable dry dog food":
             shopping_cart.append("Chicken And Country Vegetable Dry Dog Food")
             price_total.append(price)
-            print(
-                f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n"
+            print("\nThis is your shopping cart\n")
+            cart_quantity = dict(
+                (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
             )
+            print(cart_quantity)
+            total_cost = 0
+            for x in price_total:
+                total_cost = total_cost + x
+            print(f"\nThe shopping cart total is £{total_cost}\n")
 
     if choice == "2":
         print(shopping_cart)
         remove_item = input(
-            "Please input item number that you would like to remove from your cart: "
+            "Please input item that you would like to remove from your cart: "
         )
         if remove_item in shopping_cart:
             index = shopping_cart.index(remove_item)
@@ -108,8 +163,4 @@ while not done:
     else:
         # Request input from user for their menu choice and the item that they would like to add to basket
 
-        # Display output to the user to tell them the price of the item
-
-        # Display output to the user to tell them that the item has been added to their basket
-
-        print("This item has been added to your cart successfully")
+        print("This item has been added to your cart successfully\n")
