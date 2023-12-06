@@ -19,6 +19,12 @@ while True:
         add_item = input("Please input the item that you would like to add to your basket: ")
     elif choice == "2":
         remove_item = input("Please input the item that you would like to remove from your basket: ")
+    elif choice == "3": # This will include a function for the user to view their cart
+        pass
+    elif choice == "4": # This will include a function for the user to checkout with items
+        pass
+    else:
+        break
 
 
 # Display output to the user to tell them the price of the item
