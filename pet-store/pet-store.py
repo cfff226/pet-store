@@ -42,6 +42,7 @@ while not done:
         add_item = input(
             "\nPlease input the number of the item that you would like to add to your basket: "
         )
+        price = float(input("Please input the price of the item you wish to purchase: "))
         if add_item.lower() == "1":
             shopping_cart.append("1. Purina One Cat Salmon - Whole Grain 3KG")
             print(shopping_cart)
