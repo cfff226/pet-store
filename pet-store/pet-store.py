@@ -23,9 +23,13 @@ while not done:
         print("\n'Purina One Cat Salmon - Whole Grain' | 3KG |£7.99\n")
         print("'Iams Senior 7+ Cat Food With Ocean Fish' | 2KG | £5.99\n")
         print("'Iams Adult 1+ Cat Food With Fresh Chicken' | 800KG | £3.99\n")
-        print("'Felix As Good As It Looks Cat Food Mixed Selection' | 40X100G | £7.00\n")
+        print(
+            "'Felix As Good As It Looks Cat Food Mixed Selection' | 40X100G | £7.00\n"
+        )
         print("'Felix Doubley Delicious Cat Food Meaty Selection' | 12x100G | £4.00\n")
-        print("'Winalot Wet Dog Food Pouches Meaty Chunks In Jelly' | 12X100G | £3.99\n")
+        print(
+            "'Winalot Wet Dog Food Pouches Meaty Chunks In Jelly' | 12X100G | £3.99\n"
+        )
         print("'Bakers Whirlers Double Flavour Twisted Treats' | 130G | £4.00\n")
         print("'Chicken And Country Vegetable Dry Dog Food' | 800KG | £6.99\n")
         add_item = input(
@@ -35,10 +39,9 @@ while not done:
             input("Please input the price of the item you wish to purchase: ")
         )
         if add_item.lower() == "purina one cat salmon - whole grain":
-            shopping_cart.append("purina one cat salmon - whole grain")
+            shopping_cart.append("Purina One Cat Salmon - Whole Grain")
             price_total.append(price)
-            print(shopping_cart)
-            print(price_total)
+            print(f"\nThis is your shopping cart \n\n{shopping_cart} : £{price_total}\n")
         elif add_item.lower() == "iams senior 7+ cat food with ocean fish":
             shopping_cart.append("iams senior 7+ cat food with ocean fish")
             price_total.append(price)
@@ -80,7 +83,7 @@ while not done:
         remove_item = input(
             "Please input item number that you would like to remove from your cart: "
         )
-        if remove_item in shopping_cart: 
+        if remove_item in shopping_cart:
             index = shopping_cart.index(remove_item)
             shopping_cart.remove(remove_item)
             price_total.pop(index)
@@ -97,7 +100,7 @@ while not done:
 
         # Display output to the user to tell them the price of the item
 
-        print(f"This item costs ....")
+    
 
 # Display output to the user to tell them that the item has been added to their basket
 
