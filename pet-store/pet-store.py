@@ -84,11 +84,15 @@ while not done:
             index = shopping_cart.index(remove_item)
             shopping_cart.remove(remove_item)
             price_total.pop(index)
+        else:
+            print(
+                "\n\n---------------- Your shopping cart is already empty ---------------- \n\n"
+            )
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
-            "\n___________________________________________________\n\nThis is your shopping cart:\
-                   \n\n\n\n\n___________________________________________________\n"
+            "\n----------------------------------------------\n\nThis is your shopping cart:\
+                   \n\n\n\n\n----------------------------------------------\n"
         )
         cart_quantity = dict(
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
