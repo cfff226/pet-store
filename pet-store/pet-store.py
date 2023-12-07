@@ -50,17 +50,14 @@ while not done:
         elif add_item.lower() == "felix as good as it looks cat food mixed selection":
             shopping_cart.append("Felix As Good As It Looks Cat Food Mixed Selection")
             price_total.append(price)
-            
 
         elif add_item.lower() == "felix doubley delicious cat food meaty selection":
             shopping_cart.append("Felix Doubley Delicious Cat Food Meaty Selection")
             price_total.append(price)
-           
-            
+
         elif add_item.lower() == "winalot wet dog food pouches meaty chunks in jelly":
             shopping_cart.append("Winalot Wet Dog Food Pouches Meaty Chunks In Jelly")
             price_total.append(price)
-   
 
         elif add_item.lower() == "bakers whirlers double flavour twisted treats":
             shopping_cart.append("Bakers Whirlers Double Flavour Twisted Treats")
@@ -69,7 +66,7 @@ while not done:
         elif add_item.lower() == "chicken and country vegetable dry dog food":
             shopping_cart.append("Chicken And Country Vegetable Dry Dog Food")
             price_total.append(price)
-            
+
     if choice == "2":
         print(shopping_cart)
         remove_item = input(
@@ -81,19 +78,10 @@ while not done:
             price_total.pop(index)
 
     elif choice == "3":  # This will include a function for the user to view their cart
-            print("\n___________________________________________________\n\nThis is your shopping cart:\
-                   \n\n\n\n\n___________________________________________________\n")
-            cart_quantity = dict(
-            (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
-            )
-    elif (
-        choice == "4"
-    ):  # This will exit the program and include a function for the user to checkout with items
-        print("Thank you for shopping with Paws n Cart")
-        done = True
-    else:
-        print("This item has been added to your cart successfully\n")
-        print("\nThis is your shopping cart\n")
+        print(
+            "\n___________________________________________________\n\nThis is your shopping cart:\
+                   \n\n\n\n\n___________________________________________________\n"
+        )
         cart_quantity = dict(
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
         )
@@ -102,3 +90,10 @@ while not done:
         for x in price_total:
             total_cost = total_cost + x
         print(f"\nThe shopping cart total is £{total_cost}\n")
+    elif (
+        choice == "4"
+    ):  # This will exit the program and include a function for the user to checkout with items
+        print("Thank you for shopping with Paws n Cart")
+        done = True
+    else:
+        print("This item has been added to your cart successfully\n")
