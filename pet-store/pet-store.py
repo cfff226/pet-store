@@ -85,6 +85,7 @@ while not done:
         cart_quantity = dict(
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
         )
+        cart_quantity = "".join(cart_quantity)
         print(cart_quantity)
         total_cost = 0
         for x in price_total:
@@ -96,4 +97,4 @@ while not done:
         print("Thank you for shopping with Paws n Cart")
         done = True
     else:
-        print("This item has been added to your cart successfully\n")
+        print("\nThis item has been added to your cart successfully\n")
