@@ -81,7 +81,11 @@ while not done:
             price_total.pop(index)
 
     elif choice == "3":  # This will include a function for the user to view their cart
-        pass
+            print("\n___________________________________________________\n\nThis is your shopping cart:\
+                   \n\n\n\n\n___________________________________________________\n")
+            cart_quantity = dict(
+            (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
+            )
     elif (
         choice == "4"
     ):  # This will exit the program and include a function for the user to checkout with items
