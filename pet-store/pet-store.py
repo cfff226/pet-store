@@ -85,7 +85,6 @@ while not done:
         cart_quantity = dict(
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
         )
-        cart_quantity = "".join(cart_quantity)
         print(cart_quantity)
         total_cost = 0
         for x in price_total:
