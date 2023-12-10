@@ -110,8 +110,8 @@ while not done:
             for value in cart_quantity.values():
                 pass
         for i in cart_quantity:
-            print(f"{i}: £{u} {value}")
-        print(f"\nThe shopping cart total is £{total_cost}\n")
+            print(f"\nItem: {i}: ----- Price: £{u} ----- Quantity: {value}")
+        print(f"\n\nThe shopping cart total is £{total_cost}\n")
     elif (
         choice == "4"
     ):  # This will exit the program and include a function for the user to checkout with items
