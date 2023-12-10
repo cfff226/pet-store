@@ -1,3 +1,5 @@
+import math
+
 # A program which allows the user to add, remove and checkout with items that they purchase
 
 # Dictionary of items
@@ -86,7 +88,7 @@ while not done:
             price_total.pop(index)
         else:
             print(
-                "\n\n---------------- Your shopping cart is already empty ---------------- \n\n"
+                "\n\n---------------- That item is not in your shopping cart ---------------- \n\n"
             )
 
     elif choice == "3":  # This will include a function for the user to view their cart
@@ -101,6 +103,14 @@ while not done:
         total_cost = 0
         for x in price_total:
             total_cost = total_cost + x
+        itemised = price_total
+        for u in itemised:
+            pass
+        for key in cart_quantity.keys():
+            for value in cart_quantity.values():
+                pass
+        for i in cart_quantity:
+            print(f"{i}: £{u} {value}")
         print(f"\nThe shopping cart total is £{total_cost}\n")
     elif (
         choice == "4"
