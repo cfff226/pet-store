@@ -106,11 +106,11 @@ while not done:
         itemised = price_total
         for u in itemised:
             pass
-        #for key in cart_quantity.keys():
-            #for value in cart_quantity.values():
-                #pass
+        # for key in cart_quantity.keys():
+        # for value in cart_quantity.values():
+        # pass
         for value in cart_quantity.keys():
-            quantity = (cart_quantity[value])
+            quantity = cart_quantity[value]
         for i in cart_quantity:
             print(f"\nItem: {i}: ----- Price: £{u} ----- Quantity: {quantity}")
         print(f"\n\nThe shopping cart total is £{total_cost}\n")
@@ -121,5 +121,3 @@ while not done:
         done = True
     else:
         pass
-
-
