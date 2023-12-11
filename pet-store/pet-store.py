@@ -46,9 +46,7 @@ while not done:
                 "\nPlease input the number of the item that you would like to add to your cart: "
             )
         )
-        price = float(
-            input("Please input the price of the item you wish to purchase: ")
-        )
+    
 
         if add_item < 5:
             print("\nYou selected: ", menu[add_item-1])
