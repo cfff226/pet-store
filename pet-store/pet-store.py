@@ -30,17 +30,14 @@ while not done:
 
     if choice == "1":
         # Menu which shows the user the range of items
-        print("1" + "." + menu[0])
-        print("2" + "." + menu[1])
-        print("3" + "." + menu[2])
-        print("4" + "." + menu[3])
-        print("5" + "." + menu[4])
-        print("6" + "." + menu[5])
-        print("7" + "." + menu[6])
-        print("8" + "." + menu[7])
-        print("9" + "." + menu[8])
-
-
+        print("1" + ". " + menu[0])
+        print("2" + ". " + menu[1])
+        print("3" + ". " + menu[2])
+        print("4" + ". " + menu[3])
+        print("5" + ". " + menu[4])
+        print("6" + ". " + menu[5])
+        print("7" + ". " + menu[6])
+        print("8" + ". " + menu[7])
 
         add_item = input(
             "\nPlease input the item that you would like to add to your cart: "
