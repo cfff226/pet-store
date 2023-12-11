@@ -84,7 +84,13 @@ while not done:
             "\n----------------------------------------------\n\nThis is your shopping cart:\
                    \n\n\n\n\n----------------------------------------------\n"
         )
-        print(shopping_cart)
+    
+        for i in range(len(shopping_cart)):
+            idx = menu.index(shopping_cart[i])
+            unit_price = prices[idx]
+            print(f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n")
+
+
 
     elif (
         choice == "4"
