@@ -12,6 +12,8 @@ menu = ["Purina One Cat Salmon - Whole Grain", "Iams Senior 7+ Cat Food With Oce
 "Felix As Good As It Looks Cat Food Mixed Selection", "Felix Doubley Delicious Cat Food Meaty Selection", "Winalot Wet Dog Food Pouches Meaty Chunks In Jelly",
  "Bakers Whirlers Double Flavour Twisted Treats", "Chicken And Country Vegetable Dry Dog Food"]
 
+prices = [7.99, 5.99, 3.99, 7.00, 4.00, 3.99, 4.00, 6.99]
+
 # Display the menu and the cart until the user checks out
 
 print("Welcome to Paws n Cart \n\nWhat would you like to do?\n")
@@ -42,6 +44,7 @@ while not done:
         price = float(
             input("Please input the price of the item you wish to purchase: ")
         )
+
         if add_item.lower() == "purina one cat salmon - whole grain":
             shopping_cart.append("Purina One Cat Salmon - Whole Grain")
             price_total.append(price)
