@@ -100,7 +100,7 @@ while not done:
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
         )
         for item in cart_quantity:
-            print(item, ":", cart_quantity[item])
+            print(item, ":", cart_quantity)
 
         total_cost = 0
         for x in price_total:
