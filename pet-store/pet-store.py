@@ -5,7 +5,12 @@ import math
 # Dictionary of items
 
 shopping_cart = []
+shopping_quant = []
 price_total = []
+
+menu = ["Purina One Cat Salmon - Whole Grain", "Iams Senior 7+ Cat Food With Ocean Fish", "Iams Adult 1+ Cat Food With Fresh Chicken",
+"Felix As Good As It Looks Cat Food Mixed Selection", "Felix Doubley Delicious Cat Food Meaty Selection", "Winalot Wet Dog Food Pouches Meaty Chunks In Jelly",
+ "Bakers Whirlers Double Flavour Twisted Treats", "Chicken And Country Vegetable Dry Dog Food"]
 
 # Display the menu and the cart until the user checks out
 
