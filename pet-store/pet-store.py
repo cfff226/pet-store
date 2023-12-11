@@ -7,6 +7,9 @@ import math
 shopping_cart = []
 price_total = []
 
+price_dictionary = {}
+price_dictionary['Dict1'] = {}
+
 # Display the menu and the cart until the user checks out
 
 print("Welcome to Paws n Cart \n\nWhat would you like to do?\n")
@@ -41,6 +44,10 @@ while not done:
             shopping_cart.append("Purina One Cat Salmon - Whole Grain")
             price_total.append(price)
             print("\nThis item has been added to your cart successfully\n")
+            price_dictionary['Dict1']["Item"] = add_item
+            price_dictionary['Dict1']["Price"] = price
+            print(price_dictionary)
+
 
         elif add_item.lower() == "iams senior 7+ cat food with ocean fish":
             shopping_cart.append("Iams Senior 7+ Cat Food With Ocean Fish")
@@ -99,6 +106,13 @@ while not done:
         cart_quantity = dict(
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
         )
+
+
+
+
+
+
+        
         for item in cart_quantity:
             print(item, ":", cart_quantity)
 
