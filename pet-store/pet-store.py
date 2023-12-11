@@ -99,20 +99,12 @@ while not done:
         cart_quantity = dict(
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
         )
-        print(cart_quantity)
+        for item in cart_quantity:
+            print(item, ":", cart_quantity[item])
+
         total_cost = 0
         for x in price_total:
             total_cost = total_cost + x
-        itemised = price_total
-        for u in itemised:
-            pass
-        # for key in cart_quantity.keys():
-        # for value in cart_quantity.values():
-        # pass
-        for value in cart_quantity.keys():
-            quantity = cart_quantity[value]
-        for i in cart_quantity:
-            print(f"\nItem: {i}: ----- Price: £{u} ----- Quantity: {quantity}")
         print(f"\n\nThe shopping cart total is £{total_cost}\n")
     elif (
         choice == "4"
