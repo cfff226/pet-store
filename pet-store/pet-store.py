@@ -32,7 +32,7 @@ while not done:
         # Menu which shows the user the range of items
 
         for i in range(len(menu)):
-            print(str(i+1) + ". " + menu[i])
+            print(str(i+1) + ". " + menu[i], prices[i])
 
 
 
