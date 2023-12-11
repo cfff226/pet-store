@@ -63,8 +63,6 @@ while not done:
                 shopping_cart.append(menu[add_item-1])
 
 
-
-
             print("\nThis item has been added to your cart successfully\n")
 
 
@@ -88,17 +86,7 @@ while not done:
             "\n----------------------------------------------\n\nThis is your shopping cart:\
                    \n\n\n\n\n----------------------------------------------\n"
         )
-        cart_quantity = dict(
-            (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
-        )
-
-        for item in cart_quantity:
-            print(item, ":", cart_quantity)
-
-        total_cost = 0
-        for x in price_total:
-            total_cost = total_cost + x
-        print(f"\n\nThe shopping cart total is £{total_cost}\n")
+        
     elif (
         choice == "4"
     ):  # This will exit the program and include a function for the user to checkout with items
