@@ -46,25 +46,23 @@ while not done:
                 "\nPlease input the number of the item that you would like to add to your cart: "
             )
         )
-    
 
         if add_item < 5:
-            print("\nYou selected: ", menu[add_item-1])
+            print("\nYou selected: ", menu[add_item - 1])
             quant = int(
                 input("\nPlease input the quantity of the item you wish to purchase: ")
             )
-            
-            if menu[add_item-1] in shopping_cart:
+
+            if menu[add_item - 1] in shopping_cart:
                 print("repeated order")
+                idx = shopping_cart.index(menu[add_item - 1])
+                print(idx)
             else:
                 print("new selection")
-                shopping_cart.append(menu[add_item-1])
+                shopping_cart.append(menu[add_item - 1])
                 shopping_quant.append(quant)
 
-
             print("\nThis item has been added to your cart successfully\n")
-
-
 
     if choice == "2":
         print(shopping_cart)
@@ -86,7 +84,6 @@ while not done:
                    \n\n\n\n\n----------------------------------------------\n"
         )
         print(shopping_cart)
-
 
     elif (
         choice == "4"
