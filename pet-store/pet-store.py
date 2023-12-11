@@ -59,6 +59,7 @@ while not done:
             else:
                 print("new selection")
                 shopping_cart.append(menu[add_item-1])
+                shopping_quant.append(quant)
 
 
             print("\nThis item has been added to your cart successfully\n")
