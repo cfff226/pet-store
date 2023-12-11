@@ -8,9 +8,16 @@ shopping_cart = []
 shopping_quant = []
 price_total = []
 
-menu = ["Purina One Cat Salmon - Whole Grain               ", "Iams Senior 7+ Cat Food With Ocean Fish           ", "Iams Adult 1+ Cat Food With Fresh Chicken         ",
-"Felix As Good As It Looks Cat Food Mixed Selection", "Felix Doubley Delicious Cat Food Meaty Selection  ", "Winalot Wet Dog Food Pouches Meaty Chunks In Jelly",
- "Bakers Whirlers Double Flavour Twisted Treats     ", "Chicken And Country Vegetable Dry Dog Food        "]
+menu = [
+    "Purina One Cat Salmon - Whole Grain               ",
+    "Iams Senior 7+ Cat Food With Ocean Fish           ",
+    "Iams Adult 1+ Cat Food With Fresh Chicken         ",
+    "Felix As Good As It Looks Cat Food Mixed Selection",
+    "Felix Doubley Delicious Cat Food Meaty Selection  ",
+    "Winalot Wet Dog Food Pouches Meaty Chunks In Jelly",
+    "Bakers Whirlers Double Flavour Twisted Treats     ",
+    "Chicken And Country Vegetable Dry Dog Food        ",
+]
 
 prices = [7.99, 5.99, 3.99, 7.00, 4.00, 3.99, 4.00, 6.99]
 
@@ -32,22 +39,21 @@ while not done:
         # Menu which shows the user the range of items
 
         for i in range(len(menu)):
-            print(str(i+1) + ". " + menu[i], prices[i])
+            print(str(i + 1) + ". " + menu[i], prices[i])
 
-
-
-        add_item = int(input(
-            "\nPlease input the number of the item that you would like to add to your cart: "
-        ))
+        add_item = int(
+            input(
+                "\nPlease input the number of the item that you would like to add to your cart: "
+            )
+        )
         price = float(
             input("Please input the price of the item you wish to purchase: ")
         )
 
         if add_item == 1:
-            shopping_cart.append("Purina One Cat Salmon - Whole Grain")
-            price_total.append(price)
+            print("You selected: ", menu[0])
             print("\nThis item has been added to your cart successfully\n")
-        
+
         elif add_item.lower() == "iams senior 7+ cat food with ocean fish":
             shopping_cart.append("Iams Senior 7+ Cat Food With Ocean Fish")
             price_total.append(price)
@@ -105,8 +111,6 @@ while not done:
         cart_quantity = dict(
             (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
         )
-
-      
 
         for item in cart_quantity:
             print(item, ":", cart_quantity)
