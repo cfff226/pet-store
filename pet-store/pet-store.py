@@ -51,8 +51,12 @@ while not done:
         )
 
         if add_item == 1:
-            print("You selected: ", menu[0])
+            print("\nYou selected: ", menu[0])
+            quant = int(
+                input("\nPlease input the quantity of the item you wish to purchase: ")
+            )
             print("\nThis item has been added to your cart successfully\n")
+
 
         elif add_item.lower() == "iams senior 7+ cat food with ocean fish":
             shopping_cart.append("Iams Senior 7+ Cat Food With Ocean Fish")
