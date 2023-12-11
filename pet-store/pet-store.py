@@ -36,14 +36,14 @@ while not done:
 
 
 
-        add_item = input(
-            "\nPlease input the item that you would like to add to your cart: "
-        )
+        add_item = int(input(
+            "\nPlease input the number of the item that you would like to add to your cart: "
+        ))
         price = float(
             input("Please input the price of the item you wish to purchase: ")
         )
 
-        if add_item.lower() == "purina one cat salmon - whole grain":
+        if add_item == 1:
             shopping_cart.append("Purina One Cat Salmon - Whole Grain")
             price_total.append(price)
             print("\nThis item has been added to your cart successfully\n")
