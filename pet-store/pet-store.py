@@ -50,7 +50,7 @@ while not done:
             input("Please input the price of the item you wish to purchase: ")
         )
 
-        if add_item == 1:
+        if add_item < 5:
             print("\nYou selected: ", menu[add_item-1])
             quant = int(
                 input("\nPlease input the quantity of the item you wish to purchase: ")
@@ -86,7 +86,9 @@ while not done:
             "\n----------------------------------------------\n\nThis is your shopping cart:\
                    \n\n\n\n\n----------------------------------------------\n"
         )
-        
+        print(shopping_cart)
+
+
     elif (
         choice == "4"
     ):  # This will exit the program and include a function for the user to checkout with items
