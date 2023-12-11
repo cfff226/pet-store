@@ -57,6 +57,7 @@ while not done:
                 print("repeated order")
                 idx = shopping_cart.index(menu[add_item - 1])
                 print(idx)
+                shopping_quant[idx] += quant
             else:
                 print("new selection")
                 shopping_cart.append(menu[add_item - 1])
