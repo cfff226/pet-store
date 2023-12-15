@@ -85,6 +85,15 @@ while not done:
                     "\nPlease input the number of the item that you would like to remove from your cart: "
                 )
             )
+        if remove_item < 5:
+            print("\nYou selected: ", menu[remove_item - 1])
+            quant = int(
+                input(
+                    "\nPlease input the quantity of the item you wish to remove: "
+                )
+            )
+
+            print("\nThis item has been removed from your cart successfully\n")
 
        
 
