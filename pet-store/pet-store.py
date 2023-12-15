@@ -66,27 +66,24 @@ while not done:
             print("\nThis item has been added to your cart successfully\n")
 
     if choice == "2":
-    
-       # This will include a function for the user to remove items from their cart
+        # This will include a function for the user to remove items from their cart
 
+        print(
+            "\n----------------------------------------------\n\nThis is your shopping cart:\
+                        \n\n\n\n\n----------------------------------------------\n"
+        )
 
-
-
-
-
-
-
-
-
-
-
-
-
+        for i in range(len(shopping_cart)):
+            idx = menu.index(shopping_cart[i])
+            unit_price = prices[idx]
+            print(
+                f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
+            )
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
             "\n----------------------------------------------\n\nThis is your shopping cart:\
-                   \n\n\n\n\n----------------------------------------------\n"
+                \n\n\n\n\n----------------------------------------------\n"
         )
 
         for i in range(len(shopping_cart)):
