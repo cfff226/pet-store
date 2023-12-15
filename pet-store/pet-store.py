@@ -80,6 +80,14 @@ while not done:
                 f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
 
+        remove_item = int(
+                input(
+                    "\nPlease input the number of the item that you would like to remove from your cart: "
+                )
+            )
+
+       
+
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
             "\n----------------------------------------------\n\nThis is your shopping cart:\
