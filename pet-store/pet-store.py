@@ -96,6 +96,12 @@ while not done:
 
         if menu[remove_item - 1] in shopping_cart:
             print("this item is in cart")
+            idx = shopping_cart.index(menu[remove_item - 1])
+            print(idx)
+            shopping_quant[idx] - quant
+            shopping_cart.remove(menu[remove_item - 1])
+        else:
+            print("\n\n\n\nthis item is not your cart")
             
 
     elif choice == "3":  # This will include a function for the user to view their cart
