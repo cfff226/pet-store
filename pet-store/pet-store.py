@@ -81,21 +81,22 @@ while not done:
             )
 
         remove_item = int(
-                input(
-                    "\nPlease input the number of the item that you would like to remove from your cart: "
-                )
+            input(
+                "\nPlease input the number of the item that you would like to remove from your cart: "
             )
+        )
         if remove_item < 5:
             print("\nYou selected: ", menu[remove_item - 1])
             quant = int(
-                input(
-                    "\nPlease input the quantity of the item you wish to remove: "
-                )
+                input("\nPlease input the quantity of the item you wish to remove: ")
             )
 
-            print("\nThis item has been removed from your cart successfully\n")
+        for x in enumerate(shopping_cart, 1):
+            print(x)
 
-       
+        if menu[remove_item - 1] in shopping_cart:
+            print("this item is in cart")
+            
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
