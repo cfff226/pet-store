@@ -41,12 +41,18 @@ while not done:
         for i in range(len(menu)):
             print(str(i + 1) + ". " + menu[i], prices[i])
 
-        add_item = int(
-            input(
-                "\nPlease input the number of the item that you would like to add to your cart: "
-            )
-        )
+        while True:
+            try:
+                add_item = int(
+                    input(
+                        "\nPlease input the number of the item that you would like to add to your cart: "
+                    )
+                )
+                break
+            except ValueError:
+                continue
 
+    
         if add_item < 5:
             print("\nYou selected: ", menu[add_item - 1])
             quant = int(
@@ -91,9 +97,6 @@ while not done:
                 input("\nPlease input the quantity of the item you wish to remove: ")
             )
 
-        for x in enumerate(shopping_cart, 1):
-            print(x)
-
         if menu[remove_item - 1] in shopping_cart:
             print("this item is in cart")
             idx = shopping_cart.index(menu[remove_item - 1])
@@ -102,7 +105,6 @@ while not done:
             shopping_cart.remove(menu[remove_item - 1])
         else:
             print("\n\n\n\nthis item is not your cart")
-            
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
