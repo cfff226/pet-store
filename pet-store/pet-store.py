@@ -51,7 +51,7 @@ while not done:
                 break
             except ValueError:
                 continue
- 
+
         while True:
             try:
                 quant = int(
@@ -88,7 +88,7 @@ while not done:
             idx = menu.index(shopping_cart[i])
             unit_price = prices[idx]
             print(
-                f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
+                f"{i + 1} Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
 
         remove_item = int(
