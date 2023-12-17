@@ -100,15 +100,20 @@ while not done:
         quant = int(
             input("\nPlease input the quantity of the item you wish to remove: ")
         )
+        print(quant)
 
         if shopping_cart[remove_item - 1] in shopping_cart:
             print("this item is in cart")
             idx = shopping_cart.index(shopping_cart[remove_item - 1])
-            print(idx)
-            shopping_quant[idx] - quant
+            new_quant = shopping_quant[idx] - quant
+            print(f"new quant: {new_quant}")
             shopping_cart.remove(shopping_cart[remove_item - 1])
         else:
             print("\n\n\n\nthis item is not your cart")
+
+    # At the moment there is an error where instead of reducing the quantity by the users input, the program deletes the
+    # entire item from the cart, even though the quantity is showing as updated when {new quant} is printed out
+    # This is something I am working on fixing
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
