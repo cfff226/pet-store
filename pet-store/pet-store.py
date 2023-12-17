@@ -1,9 +1,25 @@
+import math
+
 # A program which allows the user to add, remove and checkout with items that they purchase
 
 # Dictionary of items
 
 shopping_cart = []
+shopping_quant = []
 price_total = []
+
+menu = [
+    "Purina One Cat Salmon - Whole Grain               ",
+    "Iams Senior 7+ Cat Food With Ocean Fish           ",
+    "Iams Adult 1+ Cat Food With Fresh Chicken         ",
+    "Felix As Good As It Looks Cat Food Mixed Selection",
+    "Felix Doubley Delicious Cat Food Meaty Selection  ",
+    "Winalot Wet Dog Food Pouches Meaty Chunks In Jelly",
+    "Bakers Whirlers Double Flavour Twisted Treats     ",
+    "Chicken And Country Vegetable Dry Dog Food        ",
+]
+
+prices = [7.99, 5.99, 3.99, 7.00, 4.00, 3.99, 4.00, 6.99]
 
 # Display the menu and the cart until the user checks out
 
@@ -21,87 +37,98 @@ while not done:
 
     if choice == "1":
         # Menu which shows the user the range of items
-        print("\nPurina One Cat Salmon - Whole Grain | 3KG |£7.99\n")
-        print("Iams Senior 7+ Cat Food With Ocean Fish | 2KG | £5.99\n")
-        print("Iams Adult 1+ Cat Food With Fresh Chicken | 800KG | £3.99\n")
-        print("Felix As Good As It Looks Cat Food Mixed Selection | 40X100G | £7.00\n")
-        print("Felix Doubley Delicious Cat Food Meaty Selection | 12x100G | £4.00\n")
-        print("Winalot Wet Dog Food Pouches Meaty Chunks In Jelly | 12X100G | £3.99\n")
-        print("Bakers Whirlers Double Flavour Twisted Treats | 130G | £4.00\n")
-        print("Chicken And Country Vegetable Dry Dog Food | 800KG | £6.99\n")
-        add_item = input(
-            "\nPlease input the item that you would like to add to your cart: "
-        )
-        price = float(
-            input("Please input the price of the item you wish to purchase: ")
-        )
-        if add_item.lower() == "purina one cat salmon - whole grain":
-            shopping_cart.append("Purina One Cat Salmon - Whole Grain")
-            price_total.append(price)
-            print("\nThis item has been added to your cart successfully\n")
 
-        elif add_item.lower() == "iams senior 7+ cat food with ocean fish":
-            shopping_cart.append("Iams Senior 7+ Cat Food With Ocean Fish")
-            price_total.append(price)
-            print("\nThis item has been added to your cart successfully\n")
+        for i in range(len(menu)):
+            print(str(i + 1) + ". " + menu[i], prices[i])
 
-        elif add_item.lower() == "iams adult 1+ cat food with fresh chicken":
-            shopping_cart.append("Iams Adult 1+ Cat Food With Fresh Chicken")
-            price_total.append(price)
-            print("\nThis item has been added to your cart successfully\n")
+        while True:
+            try:
+                add_item = int(
+                    input(
+                        "\nPlease input the number of the item that you would like to add to your cart: "
+                    )
+                )
+                break
+            except ValueError:
+                continue
 
-        elif add_item.lower() == "felix as good as it looks cat food mixed selection":
-            shopping_cart.append("Felix As Good As It Looks Cat Food Mixed Selection")
-            price_total.append(price)
-            print("\nThis item has been added to your cart successfully\n")
+        while True:
+            try:
+                quant = int(
+                    input(
+                        "\nPlease input the quantity of the item you wish to purchase: "
+                    )
+                )
+                break
+            except ValueError:
+                print("\n\nYou've entered an incorrect value")
+                continue
 
-        elif add_item.lower() == "felix doubley delicious cat food meaty selection":
-            shopping_cart.append("Felix Doubley Delicious Cat Food Meaty Selection")
-            price_total.append(price)
-            print("\nThis item has been added to your cart successfully\n")
+        if menu[add_item - 1] in shopping_cart:
+            print("repeated order")
+            idx = shopping_cart.index(menu[add_item - 1])
+            print(idx)
+            shopping_quant[idx] += quant
+        else:
+            print("new selection")
+            shopping_cart.append(menu[add_item - 1])
+            shopping_quant.append(quant)
 
-        elif add_item.lower() == "winalot wet dog food pouches meaty chunks in jelly":
-            shopping_cart.append("Winalot Wet Dog Food Pouches Meaty Chunks In Jelly")
-            price_total.append(price)
-            print("\nThis item has been added to your cart successfully\n")
-
-        elif add_item.lower() == "bakers whirlers double flavour twisted treats":
-            shopping_cart.append("Bakers Whirlers Double Flavour Twisted Treats")
-            price_total.append(price)
-            print("\nThis item has been added to your cart successfully\n")
-
-        elif add_item.lower() == "chicken and country vegetable dry dog food":
-            shopping_cart.append("Chicken And Country Vegetable Dry Dog Food")
-            price_total.append(price)
             print("\nThis item has been added to your cart successfully\n")
 
     if choice == "2":
-        print(shopping_cart)
-        remove_item = input(
-            "Please input item that you would like to remove from your cart: "
+        # This will include a function for the user to remove items from their cart
+
+        print(
+            "\n----------------------------------------------\n\nThis is your shopping cart:\
+                        \n\n\n\n\n----------------------------------------------\n"
         )
-        if remove_item in shopping_cart:
-            index = shopping_cart.index(remove_item)
-            shopping_cart.remove(remove_item)
-            price_total.pop(index)
-        else:
+
+        for i in range(len(shopping_cart)):
+            idx = menu.index(shopping_cart[i])
+            unit_price = prices[idx]
             print(
-                "\n\n---------------- Your shopping cart is already empty ---------------- \n\n"
+                f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
+
+        remove_item = int(
+            input(
+                "\nPlease input the number of the item that you would like to remove from your cart: "
+            )
+        )
+        print("\nYou selected: ", shopping_cart[remove_item - 1])
+        quant = int(
+            input("\nPlease input the quantity of the item you wish to remove: ")
+        )
+        print(quant)
+
+        if shopping_cart[remove_item - 1] in shopping_cart:
+            print("this item is in cart")
+            idx = shopping_cart.index(shopping_cart[remove_item - 1])
+            new_quant = shopping_quant[idx] - quant
+            print(f"new quant: {new_quant}")
+            shopping_cart.remove(shopping_cart[remove_item - 1])
+        else:
+            print("\n\n\n\nthis item is not your cart")
+
+    # At the moment there is an error where instead of reducing the quantity by the users input, the program deletes the
+    # entire item from the cart, even though the quantity is showing as updated when {new quant} is printed out
+    # This is something I am working on fixing
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
             "\n----------------------------------------------\n\nThis is your shopping cart:\
-                   \n\n\n\n\n----------------------------------------------\n"
+                \n\n\n\n\n----------------------------------------------\n"
         )
-        cart_quantity = dict(
-            (add_item, shopping_cart.count(add_item)) for add_item in shopping_cart
-        )
-        print(cart_quantity)
-        total_cost = 0
-        for x in price_total:
-            total_cost = total_cost + x
-        print(f"\nThe shopping cart total is £{total_cost}\n")
+
+        for i in range(len(shopping_cart)):
+            idx = menu.index(shopping_cart[i])
+            unit_price = prices[idx]
+            print(
+                f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}        \
+                      Price: £{unit_price}\n\n----------------------------------------------\n"
+            )
+
     elif (
         choice == "4"
     ):  # This will exit the program and include a function for the user to checkout with items
