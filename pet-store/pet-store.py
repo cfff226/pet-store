@@ -52,22 +52,29 @@ while not done:
             except ValueError:
                 continue
 
-    
-        if add_item < 5:
-            print("\nYou selected: ", menu[add_item - 1])
-            quant = int(
-                input("\nPlease input the quantity of the item you wish to purchase: ")
-            )
+        while True:
+            if add_item < 5:
+                print("\nYou selected: ", menu[add_item - 1])
+            try:
+                quant = int(
+                    input(
+                        "\nPlease input the quantity of the item you wish to purchase: "
+                    )
+                )
+                break
+            except ValueError:
+                print("\n\nYou've entered an incorrect value")
+                continue
 
-            if menu[add_item - 1] in shopping_cart:
-                print("repeated order")
-                idx = shopping_cart.index(menu[add_item - 1])
-                print(idx)
-                shopping_quant[idx] += quant
-            else:
-                print("new selection")
-                shopping_cart.append(menu[add_item - 1])
-                shopping_quant.append(quant)
+        if menu[add_item - 1] in shopping_cart:
+            print("repeated order")
+            idx = shopping_cart.index(menu[add_item - 1])
+            print(idx)
+            shopping_quant[idx] += quant
+        else:
+            print("new selection")
+            shopping_cart.append(menu[add_item - 1])
+            shopping_quant.append(quant)
 
             print("\nThis item has been added to your cart successfully\n")
 
