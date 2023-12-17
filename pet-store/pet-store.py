@@ -51,10 +51,8 @@ while not done:
                 break
             except ValueError:
                 continue
-
+ 
         while True:
-            if add_item < 5:
-                print("\nYou selected: ", menu[add_item - 1])
             try:
                 quant = int(
                     input(
