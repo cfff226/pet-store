@@ -80,8 +80,8 @@ while not done:
         # This will include a function for the user to remove items from their cart
 
         print(
-            "\n----------------------------------------------\n\nThis is your shopping cart:\
-                        \n\n\n\n\n----------------------------------------------\n"
+            "\n-----------------------------------------------------------------------------------------------------\n\n                                    This is your shopping cart:\
+                        \n\n-----------------------------------------------------------------------------------------------------\n"
         )
 
         for i in range(len(shopping_cart)):
@@ -90,7 +90,7 @@ while not done:
             print(
                 f"Item {i + 1}: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
-        
+
         while True:
             try:
                 remove_item = int(
@@ -107,7 +107,6 @@ while not done:
                 print("This item does not exist in your cart")
                 continue
 
-            
         while True:
             try:
                 quant = int(
@@ -138,8 +137,8 @@ while not done:
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
-            "\n----------------------------------------------\n\nThis is your shopping cart:\
-                \n\n\n\n\n----------------------------------------------\n"
+            "\n-----------------------------------------------------------------------------------------------------\n\n                                      This is your shopping cart:\
+                \n\n-----------------------------------------------------------------------------------------------------\n"
         )
 
         for i in range(len(shopping_cart)):
@@ -147,7 +146,7 @@ while not done:
             unit_price = prices[idx]
             print(
                 f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}        \
-                      Price: £{unit_price}\n\n----------------------------------------------\n"
+                      Price: £{unit_price}\n\n-----------------------------------------------------------------------------------------------------\n"
             )
 
     elif (
