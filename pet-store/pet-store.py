@@ -88,7 +88,7 @@ while not done:
             idx = menu.index(shopping_cart[i])
             unit_price = prices[idx]
             print(
-                f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
+                f"Item {i + 1}: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
 
         remove_item = int(
@@ -100,14 +100,17 @@ while not done:
         quant = int(
             input("\nPlease input the quantity of the item you wish to remove: ")
         )
-        print(quant)
 
         if shopping_cart[remove_item - 1] in shopping_cart:
-            print("this item is in cart")
             idx = shopping_cart.index(shopping_cart[remove_item - 1])
-            new_quant = shopping_quant[idx] - quant
-            print(f"new quant: {new_quant}")
-            shopping_cart.remove(shopping_cart[remove_item - 1])
+            shopping_quant[idx] = shopping_quant[idx] - quant
+
+            print(f"Your shopping quantity of this item is: {shopping_quant[idx]}")
+            if shopping_quant == 1:
+                print(shopping_quant)
+                shopping_cart.remove(shopping_cart[remove_item - 1])
+                print(shopping_cart)
+
         else:
             print("\n\n\n\nthis item is not your cart")
 
