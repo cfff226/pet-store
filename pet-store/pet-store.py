@@ -90,7 +90,7 @@ while not done:
             print(
                 f"Item {i + 1}: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
-
+        
         while True:
             try:
                 remove_item = int(
@@ -103,7 +103,11 @@ while not done:
             except ValueError:
                 print("You have entered an incorrect value")
                 continue
+            except IndexError:
+                print("This item does not exist in your cart")
+                continue
 
+            
         while True:
             try:
                 quant = int(
