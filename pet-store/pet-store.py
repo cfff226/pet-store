@@ -91,12 +91,19 @@ while not done:
                 f"Item {i + 1}: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
 
-        remove_item = int(
-            input(
-                "\nPlease input the number of the item that you would like to remove from your cart: "
-            )
-        )
-        print("\nYou selected: ", shopping_cart[remove_item - 1])
+        while True:
+            try:
+                remove_item = int(
+                    input(
+                        "\nPlease input the number of the item that you would like to remove from your cart: "
+                    )
+                )
+                print("\nYou selected: ", shopping_cart[remove_item - 1])
+                break
+            except ValueError:
+                print("You have entered an incorrect value")
+
+
         quant = int(
             input("\nPlease input the quantity of the item you wish to remove: ")
         )
@@ -106,7 +113,7 @@ while not done:
             shopping_quant[idx] = shopping_quant[idx] - quant
 
             print(f"Your shopping quantity of this item is: {shopping_quant[idx]}")
-            if shopping_quant == 1:
+            if shopping_quant == 0:
                 print(shopping_quant)
                 shopping_cart.remove(shopping_cart[remove_item - 1])
                 print(shopping_cart)
@@ -114,9 +121,8 @@ while not done:
         else:
             print("\n\n\n\nthis item is not your cart")
 
-    # At the moment there is an error where instead of reducing the quantity by the users input, the program deletes the
-    # entire item from the cart, even though the quantity is showing as updated when {new quant} is printed out
-    # This is something I am working on fixing
+    # At the moment there is an error where instead of deleting the entire item, the program reduces
+    # the quantity to 0. This is something I am working on fixing
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
