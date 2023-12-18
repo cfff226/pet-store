@@ -102,11 +102,19 @@ while not done:
                 break
             except ValueError:
                 print("You have entered an incorrect value")
+                continue
 
-
-        quant = int(
-            input("\nPlease input the quantity of the item you wish to remove: ")
-        )
+        while True:
+            try:
+                quant = int(
+                    input(
+                        "\nPlease input the quantity of the item you wish to remove: "
+                    )
+                )
+                break
+            except ValueError:
+                print("You have entered an incorrect value")
+                continue
 
         if shopping_cart[remove_item - 1] in shopping_cart:
             idx = shopping_cart.index(shopping_cart[remove_item - 1])
