@@ -80,45 +80,65 @@ while not done:
         # This will include a function for the user to remove items from their cart
 
         print(
-            "\n----------------------------------------------\n\nThis is your shopping cart:\
-                        \n\n\n\n\n----------------------------------------------\n"
+            "\n-----------------------------------------------------------------------------------------------------\n\n                                    This is your shopping cart:\
+                        \n\n-----------------------------------------------------------------------------------------------------\n"
         )
 
         for i in range(len(shopping_cart)):
             idx = menu.index(shopping_cart[i])
             unit_price = prices[idx]
             print(
-                f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
+                f"Item {i + 1}: {shopping_cart[i]} Quantity: {shopping_quant[i]}         Price: £{unit_price}\n"
             )
 
-        remove_item = int(
-            input(
-                "\nPlease input the number of the item that you would like to remove from your cart: "
-            )
-        )
-        print("\nYou selected: ", shopping_cart[remove_item - 1])
-        quant = int(
-            input("\nPlease input the quantity of the item you wish to remove: ")
-        )
-        print(quant)
+        while True:
+            try:
+                remove_item = int(
+                    input(
+                        "\nPlease input the number of the item that you would like to remove from your cart: "
+                    )
+                )
+                print("\nYou selected: ", shopping_cart[remove_item - 1])
+                break
+            except ValueError:
+                print("You have entered an incorrect value")
+                continue
+            except IndexError:
+                print("This item does not exist in your cart")
+                continue
+
+        while True:
+            try:
+                quant = int(
+                    input(
+                        "\nPlease input the quantity of the item you wish to remove: "
+                    )
+                )
+                break
+            except ValueError:
+                print("You have entered an incorrect value")
+                continue
 
         if shopping_cart[remove_item - 1] in shopping_cart:
-            print("this item is in cart")
             idx = shopping_cart.index(shopping_cart[remove_item - 1])
-            new_quant = shopping_quant[idx] - quant
-            print(f"new quant: {new_quant}")
-            shopping_cart.remove(shopping_cart[remove_item - 1])
+            shopping_quant[idx] = shopping_quant[idx] - quant
+
+            print(f"Your shopping quantity of this item is: {shopping_quant[idx]}")
+            if shopping_quant == 0:
+                print(shopping_quant)
+                shopping_cart.remove(shopping_cart[remove_item - 1])
+                print(shopping_cart)
+
         else:
             print("\n\n\n\nthis item is not your cart")
 
-    # At the moment there is an error where instead of reducing the quantity by the users input, the program deletes the
-    # entire item from the cart, even though the quantity is showing as updated when {new quant} is printed out
-    # This is something I am working on fixing
+    # At the moment there is an error where instead of deleting the entire item, the program reduces
+    # the quantity to 0. This is something I am working on fixing
 
     elif choice == "3":  # This will include a function for the user to view their cart
         print(
-            "\n----------------------------------------------\n\nThis is your shopping cart:\
-                \n\n\n\n\n----------------------------------------------\n"
+            "\n-----------------------------------------------------------------------------------------------------\n\n                                      This is your shopping cart:\
+                \n\n-----------------------------------------------------------------------------------------------------\n"
         )
 
         for i in range(len(shopping_cart)):
@@ -126,7 +146,7 @@ while not done:
             unit_price = prices[idx]
             print(
                 f"Item: {shopping_cart[i]} Quantity: {shopping_quant[i]}        \
-                      Price: £{unit_price}\n\n----------------------------------------------\n"
+                      Price: £{unit_price}\n\n-----------------------------------------------------------------------------------------------------\n"
             )
 
     elif (
